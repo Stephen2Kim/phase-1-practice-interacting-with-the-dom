@@ -1,13 +1,108 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <title>Dom Challenge</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #444;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
     #counter {
-      background-color: black;
-      color: white;
+      background-color: #333;
+      color: #fff;
       display: table;
+      padding: 20px;
+      font-size: 3em;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      margin: 5px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #pause {
+      background-color: #28a745;
+    }
+
+    #pause:hover {
+      background-color: #218838;
+    }
+
+    .likes {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .likes li {
+      background-color: #e9ecef;
       padding: 10px;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+
+    .comments {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    #comment-form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    #comment-input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #submit {
+      background-color: #17a2b8;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #submit:hover {
+      background-color: #138496;
     }
   </style>
 </head>
@@ -18,10 +113,10 @@
   <h1 id='counter'>
     0
   </h1>
-  <button id='minus' > ➖ </button>
-  <button id='plus' > ➕ </button>
-  <button id='heart' > ❤️ </button>
-  <button id='pause' > pause </button>
+  <button id='minus'> ➖ </button>
+  <button id='plus'> ➕ </button>
+  <button id='heart'> ❤️ </button>
+  <button id='pause'> pause </button>
 
   <ul class='likes'></ul>
 
@@ -36,10 +131,9 @@
       </br>
       <button id='submit'>submit</button>
     </form>
-
   </div>
 
-  <script src="js/index.min.js"></script>
+  <!-- <script src="js/index.min.js"></script> -->
   <script src="js/challenge.js"></script>
 </body>
 </html>
